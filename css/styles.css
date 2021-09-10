@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+
+/* Header elements */
+header {
+  background-color: black;
+  display: flex;
+}
+.div-title {
+  color: white;
+  margin: auto;
+}
+.logo {
+  width: 100px;
+}
+
+/* Main elements */
+.sub-body {
+  display: flex;
+  flex-direction: row;
+}
+nav {
+  width: 15%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+section > h2 {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.section-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+article {
+}
+
+footer {
+  height: 7%;
+  bottom: 0;
+  display: flex;
+  background: grey;
+  margin-top: 2%;
+}
+footer >p{
+  margin: auto;
+  font-size: larger;
+  font-weight: bolder;
+
+}
