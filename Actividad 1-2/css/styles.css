@@ -14,11 +14,16 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
 }
-
+.subtitle {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+}
 .div-logo {
   display: flex;
-  justify-content: end;
+  justify-content: start;
 }
 .logo {
   width: 38%;
@@ -49,6 +54,8 @@ nav {
   text-align: center;
   text-decoration: none;
   color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+  Arial, sans-serif;
 }
 /* Fin navbar */
 
@@ -92,10 +99,10 @@ article:hover {
 .price-article {
   align-self: end;
   width: auto;
-  margin: 0 10px 10px 0;
-  line-height: 20px;
+  margin: 0 10px 6px 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .desc-article {
@@ -103,11 +110,7 @@ article:hover {
   font-weight: 600;
   margin: 6px 0 0 5px;
 }
-/* article > span {
-  font-family: 'Univers LT Std Bold Cn';
-  color: black;
-  width: 30vh;
-} */
+
 .img-article {
   border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
   width: 30vh;
