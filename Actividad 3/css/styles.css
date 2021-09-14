@@ -14,11 +14,16 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
 }
-
+.subtitle {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+}
 .div-logo {
   display: flex;
-  justify-content: end;
+  justify-content: start;
 }
 .logo {
   width: 38%;
@@ -39,7 +44,6 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-
 .category_item {
   max-width: 70%;
   min-width: 60%;
@@ -49,6 +53,8 @@ nav {
   text-align: center;
   text-decoration: none;
   color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
 }
 /* Fin navbar */
 
@@ -66,7 +72,7 @@ section {
 section > h2 {
   margin: 5% 0 3% 3%;
   color: white;
-  
+
   padding: 1% 0 1% 1%;
   background: #192138;
 }
@@ -92,10 +98,11 @@ article:hover {
 .price-article {
   align-self: end;
   width: auto;
-  margin: 0 10px 10px 0;
-  line-height: 20px;
+  margin: 0 10px 6px 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .desc-article {
