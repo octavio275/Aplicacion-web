@@ -1,0 +1,65 @@
+#form-encuesta {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  width: 90%;
+  height: 70vh;
+
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+fieldset {
+  display: grid;
+  row-gap: 10px;
+  grid-template-rows: 20px 20px 20px 20px;
+}
+.container-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  justify-items: center;
+}
+.container-buttons {
+  display: flex;
+  width: 100%;
+}
+.container-buttons button {
+  background-color: #192138;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+}
+
+input {
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 10vh;
+}
+/* input,
+fieldset,
+select,
+textarea {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 0;
+} */
+
+/* input:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+fieldset:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+select:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+textarea:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+} */
