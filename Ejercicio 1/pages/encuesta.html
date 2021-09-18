@@ -31,55 +31,89 @@
       <main>
         <section>
           <h2 class="subtitle">Encuesta</h2>
-          <form method="post" id="form-encuesta" novalidate>
+          <form id="form-encuesta">
             <div class="container">
               <fieldset>
                 <legend>Datos personales</legend>
-                <label for="input-nombre">Nombre</label>
+                <label for="input-nombre"
+                  >Nombre <span style="color: red">*</span></label
+                >
                 <input
-                  id="input-nombre"
+                  pattern="[A-Za-z]{3,}"
                   type="text"
-                  placeholder="Ingrese un nombre"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Nombre"
+                  size="35"
+                  required
+                />
+                <br />
+                <label for="input-nombre"
+                  >Apellido <span style="color: red">*</span></label
+                >
+                <input
+                  pattern="[A-Za-z]{3,}"
+                  type="text"
+                  name="apellido"
+                  id="apellido"
+                  placeholder="Apellido"
+                  size="35"
+                  required
                 />
 
-                <label for="input-apellido">Apellido</label>
-                <input
-                  id="input-apellido"
-                  type="text"
-                  placeholder="Ingrese un apellido"
-                />
-                <label>Sexo </label>
+                <label>Sexo <span style="color: red">*</span></label>
                 <div class="container-checkbox">
                   <label
                     ><input
                       name="sexo"
-                      type="checkbox"
+                      id="checkbox-hombre"
+                      type="radio"
                       value="hombre"
+                      checked
                     />Hombre</label
                   >
-                  <label
-                    ><input name="sexo" type="checkbox" value="mujer" />Mujer</label
+
+                  <label>
+                    <input
+                      name="sexo"
+                      id="checkbox-mujer"
+                      type="radio"
+                      value="mujer"
+                    />Mujer</label
                   >
-                  <label
-                    ><input name="sexo" type="checkbox" value="otro" />Otro</label
+
+                  <label>
+                    <input
+                      name="sexo"
+                      id="checkbox-otro"
+                      type="radio"
+                      value="otro"
+                    />Otro</label
                   >
                 </div>
-                <label for="input-email">Email</label>
+                <label for="input-email"
+                  >Email <span style="color: red">*</span></label
+                >
                 <input
-                  id="input-email"
+                  id="email"
                   type="email"
                   placeholder="Ingrese un email"
+                  required
                 />
 
-                <label for="input-fechanac">Fecha de nacimiento</label>
-                <input id="input-fechanac" type="date" />
+                <label for="input-fechanac"
+                  >Fecha de nacimiento <span style="color: red">*</span></label
+                >
+                <input id="fechanac" type="date" />
                 <br />
               </fieldset>
 
               <fieldset>
                 <legend>Comentarios</legend>
-                <label for="input-nombre">Valoracion de la página</label>
-                <select name="Valoracion" id="input-valoracion">
+                <label for="input-nombre"
+                  >Valoracion de la página <span style="color: red">*</span></label
+                >
+                <select name="Valoracion" id="valoracion">
                   <option disabled selected>Ingrese una opcion</option>
                   <option value="Me encantó">Me encantó</option>
                   <option value="Cumple con mis expectativas"
@@ -102,12 +136,10 @@
                 <button id="btn-restablecer" name="btn-restablecer" type="reset"
                   >Restablecer valores</button
                 >
-                <button id="btn-cancelar" name="btn-cancelar" type="button"
+                <button id="cancelar" name="btn-cancelar" type="button"
                   >Cancelar</button
                 >
-                <button id="btn-enviar" name="btn-enviar" type="submit"
-                  >Enviar</button
-                >
+                <button type="button" onclick="captura()">Enviar</button>
               </div>
             </div>
           </form>

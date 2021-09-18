@@ -1,15 +1,16 @@
 #form-encuesta {
   display: flex;
-  justify-content: center;
+
 }
 
 .container {
   display: grid;
-  width: 90%;
-  height: 70vh;
-
+  width: 80%;
+  height: 85vh;
   column-gap: 10px;
   grid-template-columns: 1fr 1fr;
+
+  margin: auto;
 }
 
 fieldset {
@@ -22,6 +23,10 @@ fieldset {
   grid-template-columns: 1fr 1fr 1fr;
 
   justify-items: center;
+}
+.container-checkbox input{
+  height: auto;
+  margin-right: 5px;
 }
 .container-buttons {
   display: flex;
@@ -40,26 +45,5 @@ input {
 }
 
 textarea {
-  height: 10vh;
+  height: 37vh;
 }
-/* input,
-fieldset,
-select,
-textarea {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border: 0;
-} */
-
-/* input:hover {
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-}
-fieldset:hover {
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-}
-select:hover {
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-}
-textarea:hover {
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-} */
