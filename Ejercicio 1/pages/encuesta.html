@@ -25,60 +25,51 @@
         <a href="tenis.html" class="category_item">Tenis</a>
         <a href="boxeo.html" class="category_item">Boxeo</a>
         <a href="basket.html" class="category_item">Basketball</a>
+        <a href="encuesta.html" class="category_item active">Encuesta</a>
       </nav>
 
       <main>
         <section>
-          <h2 class="subtitle">Encuesta</h2>
-          <form method="post" id="form-encuesta" novalidate>
+          <br>
+          <h1 class="subtitle">Encuesta</h1>
+          <form>
             <div class="container">
               <fieldset>
                 <legend>Datos personales</legend>
                 <label for="input-nombre">Nombre</label>
-                <input
-                  id="input-nombre"
-                  type="text"
-                  placeholder="Ingrese un nombre"
-                />
-
-                <label for="input-apellido">Apellido</label>
-                <input
-                  id="input-apellido"
-                  type="text"
-                  placeholder="Ingrese un apellido"
-                />
+                <input pattern="[A-Za-z]{3,}" type="text" name="nomest" id="nomest" placeholder="Nombre" size="35" required>
+                <br>
+                <label for="input-nombre">Apellido</label>
+                <input pattern="[A-Za-z]{3,}" type="text" name="apell" id="apellido" placeholder="Apellido" size="35" required>
+                
                 <label>Sexo </label>
                 <div class="container-checkbox">
                   <label
-                    ><input
-                      name="sexo"
-                      type="checkbox"
-                      value="hombre"
-                    />Hombre</label
+                    ><input name="sexo"id="sexo"type="checkbox"value="hombre"/>Hombre</label>
+                  <label
+                    ><input name="sexo"id="sexo" type="checkbox" value="mujer" />Mujer</label
                   >
                   <label
-                    ><input name="sexo" type="checkbox" value="mujer" />Mujer</label
-                  >
-                  <label
-                    ><input name="sexo" type="checkbox" value="otro" />Otro</label
+                    ><input name="sexo"id="sexo" type="checkbox" value="otro" />Otro</label
                   >
                 </div>
                 <label for="input-email">Email</label>
                 <input
-                  id="input-email"
+                  id="email"
                   type="email"
                   placeholder="Ingrese un email"
+                  required
                 />
 
                 <label for="input-fechanac">Fecha de nacimiento</label>
-                <input id="input-fechanac" type="date" />
+                <input id="fechanac" type="date" />
                 <br />
               </fieldset>
 
               <fieldset>
                 <legend>Comentarios</legend>
                 <label for="input-nombre">Valoracion de la página</label>
-                <select name="Valoracion" id="input-valoracion">
+                <select name="Valoracion" id="valoracion">
                   <option disabled selected>Ingrese una opcion</option>
                   <option value="Me encantó">Me encantó</option>
                   <option value="Cumple con mis expectativas"
@@ -101,13 +92,13 @@
                 <button id="btn-restablecer" name="btn-restablecer" type="reset"
                   >Restablecer valores</button
                 >
-                <button id="btn-cancelar" name="btn-cancelar" type="button"
+                <button id="cancelar" name="btn-cancelar" type="button"
                   >Cancelar</button
                 >
-                <button id="btn-enviar" name="btn-enviar" type="submit"
-                  >Enviar</button
-                >
+                <button type="button" onclick="captura()" >Enviar</button
+                  >
               </div>
+            
             </div>
           </form>
         </section>
