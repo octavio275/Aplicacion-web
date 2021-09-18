@@ -30,30 +30,70 @@
 
       <main>
         <section>
-          <br>
-          <h1 class="subtitle">Encuesta</h1>
-          <form>
+          <h2 class="subtitle">Encuesta</h2>
+          <form id="form-encuesta">
             <div class="container">
               <fieldset>
                 <legend>Datos personales</legend>
-                <label for="input-nombre">Nombre</label>
-                <input pattern="[A-Za-z]{3,}" type="text" name="nomest" id="nomest" placeholder="Nombre" size="35" required>
-                <br>
-                <label for="input-nombre">Apellido</label>
-                <input pattern="[A-Za-z]{3,}" type="text" name="apell" id="apellido" placeholder="Apellido" size="35" required>
-                
-                <label>Sexo </label>
+                <label for="input-nombre"
+                  >Nombre <span style="color: red">*</span></label
+                >
+                <input
+                  pattern="[A-Za-z]{3,}"
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Nombre"
+                  size="35"
+                  required
+                />
+                <br />
+                <label for="input-nombre"
+                  >Apellido <span style="color: red">*</span></label
+                >
+                <input
+                  pattern="[A-Za-z]{3,}"
+                  type="text"
+                  name="apellido"
+                  id="apellido"
+                  placeholder="Apellido"
+                  size="35"
+                  required
+                />
+
+                <label>Sexo <span style="color: red">*</span></label>
                 <div class="container-checkbox">
                   <label
-                    ><input name="sexo"id="sexo"type="checkbox"value="hombre"/>Hombre</label>
-                  <label
-                    ><input name="sexo"id="sexo" type="checkbox" value="mujer" />Mujer</label
+                    ><input
+                      name="sexo"
+                      id="checkbox-hombre"
+                      type="radio"
+                      value="hombre"
+                      checked
+                    />Hombre</label
                   >
-                  <label
-                    ><input name="sexo"id="sexo" type="checkbox" value="otro" />Otro</label
+
+                  <label>
+                    <input
+                      name="sexo"
+                      id="checkbox-mujer"
+                      type="radio"
+                      value="mujer"
+                    />Mujer</label
+                  >
+
+                  <label>
+                    <input
+                      name="sexo"
+                      id="checkbox-otro"
+                      type="radio"
+                      value="otro"
+                    />Otro</label
                   >
                 </div>
-                <label for="input-email">Email</label>
+                <label for="input-email"
+                  >Email <span style="color: red">*</span></label
+                >
                 <input
                   id="email"
                   type="email"
@@ -61,14 +101,18 @@
                   required
                 />
 
-                <label for="input-fechanac">Fecha de nacimiento</label>
+                <label for="input-fechanac"
+                  >Fecha de nacimiento <span style="color: red">*</span></label
+                >
                 <input id="fechanac" type="date" />
                 <br />
               </fieldset>
 
               <fieldset>
                 <legend>Comentarios</legend>
-                <label for="input-nombre">Valoracion de la página</label>
+                <label for="input-nombre"
+                  >Valoracion de la página <span style="color: red">*</span></label
+                >
                 <select name="Valoracion" id="valoracion">
                   <option disabled selected>Ingrese una opcion</option>
                   <option value="Me encantó">Me encantó</option>
@@ -95,10 +139,8 @@
                 <button id="cancelar" name="btn-cancelar" type="button"
                   >Cancelar</button
                 >
-                <button type="button" onclick="captura()" >Enviar</button
-                  >
+                <button type="button" onclick="captura()">Enviar</button>
               </div>
-            
             </div>
           </form>
         </section>
