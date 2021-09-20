@@ -1,0 +1,49 @@
+#form-encuesta {
+  display: flex;
+
+}
+
+.container {
+  display: grid;
+  width: 80%;
+  height: 85vh;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+
+  margin: auto;
+}
+
+fieldset {
+  display: grid;
+  row-gap: 10px;
+  grid-template-rows: 20px 20px 20px 20px;
+}
+.container-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  justify-items: center;
+}
+.container-checkbox input{
+  height: auto;
+  margin-right: 5px;
+}
+.container-buttons {
+  display: flex;
+  width: 100%;
+}
+.container-buttons button {
+  background-color: #192138;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+}
+
+input {
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 37vh;
+}
