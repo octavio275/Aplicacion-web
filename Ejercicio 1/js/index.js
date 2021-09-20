@@ -1,21 +1,39 @@
-window.onload = function () {
   //document.getElementById('enviar').addEventListener("click", pulsar, false);
 
-  document.getElementById('cancelar').onclick = () => {
-    var resultado = window.confirm('Desea volver a la pagina anterior?');
-    if (resultado) {
-      window.location.href = '../index.html';
-    } else {
+
+  function iniciar(){
+    document.informacion.addEventListener("invalid",validacion, true);
+    document.getElementById("enviar").addEventListener("click",enviar, false);
+    document.informacion.addEventListener("input", controlar,false);
     }
-  };
-  /*  document.getElementById('form-encuesta').onsubmit = (e) => {
-      e.preventDefault();
-      console.log("object")
-    };
-  document.getElementById('btn-enviar').onsubmit = (e) => {
-      e.preventDefault();
-       };  */
-};
+    function validacion(e){
+      let elemento=e.target;
+      elemento.style.background='#FFDDDD';
+      }
+
+    function enviar(){
+       elemento=document.getElementById("nombre");
+      let valido=document.informacion.checkValidity();
+      if(valido){
+        document.informacion.submit();
+        
+        }
+       
+       }
+      function controlar(e){
+        elemento=e.target;
+        if(elemento.validity.valid){
+        elemento.style.background='#FFFFFF';
+        }else{
+        elemento.style.background='#FFDDDD';
+        }
+        
+        }
+
+      
+        window.addEventListener("load", iniciar, false);
+
+
 function captura() {
   let nombre = document.getElementById('nombre').value;
   let apellido = document.getElementById('apellido').value;
@@ -67,3 +85,13 @@ function captura() {
     );
   }
 }
+
+document.getElementById('cancelar').onclick = () => {
+  var resultado = window.confirm('Desea volver a la pagina anterior?');
+  if (resultado) {
+    window.location.href = '../index.html';
+  } else {
+  }
+};
+
+
