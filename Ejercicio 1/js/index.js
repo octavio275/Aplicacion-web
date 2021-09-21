@@ -1,38 +1,32 @@
-  //document.getElementById('enviar').addEventListener("click", pulsar, false);
+//document.getElementById('enviar').addEventListener("click", pulsar, false);
 
+function iniciar() {
+  document.informacion.addEventListener('invalid', validacion, true);
+  document.getElementById('enviar').addEventListener('click', enviar, false);
+  document.informacion.addEventListener('input', controlar, false);
+}
+function validacion(e) {
+  let elemento = e.target;
+  elemento.style.background = '#FFDDDD';
+}
 
-  function iniciar(){
-    document.informacion.addEventListener("invalid",validacion, true);
-    document.getElementById("enviar").addEventListener("click",enviar, false);
-    document.informacion.addEventListener("input", controlar,false);
-    }
-    function validacion(e){
-      let elemento=e.target;
-      elemento.style.background='#FFDDDD';
-      }
+function enviar() {
+  elemento = document.getElementById('nombre');
+  let valido = document.informacion.checkValidity();
+  if (valido) {
+    document.informacion.submit();
+  }
+}
+function controlar(e) {
+  elemento = e.target;
+  if (elemento.validity.valid) {
+    elemento.style.background = '#FFFFFF';
+  } else {
+    elemento.style.background = '#FFDDDD';
+  }
+}
 
-    function enviar(){
-       elemento=document.getElementById("nombre");
-      let valido=document.informacion.checkValidity();
-      if(valido){
-        document.informacion.submit();
-        
-        }
-       
-       }
-      function controlar(e){
-        elemento=e.target;
-        if(elemento.validity.valid){
-        elemento.style.background='#FFFFFF';
-        }else{
-        elemento.style.background='#FFDDDD';
-        }
-        
-        }
-
-      
-        window.addEventListener("load", iniciar, false);
-
+window.addEventListener('load', iniciar, false);
 
 function captura() {
   let nombre = document.getElementById('nombre').value;
@@ -50,39 +44,27 @@ function captura() {
   } else {
     sexo = sexo_checkbox[2].value;
   }
-
-  if (nombre == '') {
-    alert('El nombre es obligatorio');
-    document.getElementById('nombre').focus;
-  } else if (apellido === '') {
-    alert('El apellido es obligatorio');
-    document.getElementById('apellido').focus;
-  } else if (sexo === '') {
-    alert('El sexo es obligatorio');
-    document.getElementById('sexo').focus;
-  } else if (email === '') {
-    alert('El email es obligatorio');
-    document.getElementById('email').focus;
-  } else if (fecha === '') {
-    alert('Ingresar fecha es obligatorio');
-    document.getElementById('fechanac').focus;
-  } else if (valoracion === '') {
-    alert('La valoracion es obligatorio');
-    document.getElementById('valoracion').focus;
+  let expRegNombre =
+    /^([A-Za-z]{0}?[A-Za-z\']+[\s])?([A-Za-z]{0}?[A-Za-z\'])+[\s]?([A-Za-z]{0}?[A-Za-z\'])?$/;
+  let expRegEmail = /^\S+@\S+\.\S+$/;
+  if (
+    nombre == '' ||
+    apellido === '' ||
+    email === '' ||
+    fecha === '' ||
+    valoracion === ''
+  ) {
+    alert('Faltan campos requeridos por completar.');
+  } else if (
+    !(
+      expRegNombre.test(nombre) &&
+      expRegNombre.test(apellido) &&
+      expRegEmail.test(email)
+    )
+  ) {
+    alert('Hay campos con formato incorrecto.');
   } else {
-    alert(
-      nombre +
-        ' ' +
-        apellido + // el salto de linea no funciona aca \n para asi imprimir uno abajo del otro
-        ' ' +
-        sexo +
-        ' ' +
-        email +
-        ' ' +
-        fecha +
-        ' ' +
-        valoracion
-    );
+    alert(`${nombre} \n ${apellido} \n ${sexo} \n ${fecha} \n ${valoracion}`);
   }
 }
 
@@ -93,5 +75,3 @@ document.getElementById('cancelar').onclick = () => {
   } else {
   }
 };
-
-
