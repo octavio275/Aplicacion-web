@@ -31,12 +31,12 @@
       <main>
         <section>
           <h2 class="subtitle">Encuesta</h2>
-          <form name="informacion" >
+          <form name="informacion">
             <div class="container">
               <fieldset>
                 <legend>Datos personales</legend>
                 <label for="input-nombre"
-                  >Nombre <span style="color: red">*</span></label
+                  >Nombre <span class="required-input">*</span></label
                 >
                 <input
                   pattern="[A-Za-z]{3,}"
@@ -49,7 +49,7 @@
                 />
                 <br />
                 <label for="input-nombre"
-                  >Apellido <span style="color: red">*</span></label
+                  >Apellido <span class="required-input">*</span></label
                 >
                 <input
                   pattern="[A-Za-z]{3,}"
@@ -61,7 +61,7 @@
                   required
                 />
 
-                <label>Sexo <span style="color: red">*</span></label>
+                <label>Sexo <span class="required-input">*</span></label>
                 <div class="container-checkbox">
                   <label
                     ><input
@@ -92,7 +92,7 @@
                   >
                 </div>
                 <label for="input-email"
-                  >Email <span style="color: red">*</span></label
+                  >Email <span class="required-input">*</span></label
                 >
                 <input
                   id="email"
@@ -102,18 +102,19 @@
                 />
 
                 <label for="input-fechanac"
-                  >Fecha de nacimiento <span style="color: red">*</span></label
+                  >Fecha de nacimiento <span class="required-input">*</span></label
                 >
-                <input id="fechanac" type="date" />
+                <input id="fechanac" type="date" required />
                 <br />
               </fieldset>
 
               <fieldset>
                 <legend>Comentarios</legend>
                 <label for="input-nombre"
-                  >Valoracion de la página <span style="color: red">*</span></label
+                  >Valoracion de la página
+                  <span class="required-input">*</span></label
                 >
-                <select name="Valoracion" id="valoracion">
+                <select name="Valoracion" id="valoracion" required>
                   <option disabled selected>Ingrese una opcion</option>
                   <option value="Me encantó">Me encantó</option>
                   <option value="Cumple con mis expectativas"
@@ -123,7 +124,7 @@
                   <option value="Mala">Mala</option>
                   <option value="Lamentable">Lamentable</option>
                 </select>
-                <label for="input-comentario">Deje un comentario</label>
+                <label id="label-comentario" for="input-comentario">Deje un comentario</label>
                 <textarea
                   name="comentario"
                   id="input-comentario"
@@ -139,7 +140,7 @@
                 <button id="cancelar" name="btn-cancelar" type="button"
                   >Cancelar</button
                 >
-                <button type="button"id="enviar" onclick="captura()">Enviar</button>
+                <button type="button" id="enviar" onclick="captura()">Enviar</button>
               </div>
             </div>
           </form>
@@ -151,5 +152,4 @@
     </footer>
   </body>
   <script src="../js/index.js"></script>
-
 </html>
