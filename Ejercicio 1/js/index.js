@@ -41,6 +41,7 @@ function captura() {
   if (sexo_checkbox[0].checked) {
     sexo = sexo_checkbox[0].value;
   } else if (sexo_checkbox[1].checked) {
+    sexo = sexo_checkbox[1].value;
   } else {
     sexo = sexo_checkbox[2].value;
   }
