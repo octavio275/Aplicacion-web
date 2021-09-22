@@ -104,16 +104,17 @@ article {
   display: flex;
   flex-direction: column;
   margin: 5px;
-  box-shadow: 0 4px 8px 0 rgba(12, 10, 10, 0.2);
+  padding:1em;
   transition: 0.3s;
   max-width: 30vh;
-
   align-items: center;
 }
-article:hover {
+article:hover:active {
   border: none;
   outline: 0;
   padding: 12px;
+  opacity: 0.5;
+  box-shadow: 0 0 0 0.1em #181818;
   color: rgb(4, 4, 4);
   background-color: var(--secundario);
   text-align: center;

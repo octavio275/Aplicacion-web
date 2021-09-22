@@ -35,7 +35,7 @@
           <h2 class="subtitle">Más vendidos</h2>
           <div class="section-articles">
             <article>
-              <img src="./img/pera-boxeo.jpg" class="img-article"id="imagen" alt="pelota" />
+              <img src="./img/pera-boxeo.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Pera De Boxeo Vintage Everlast </span>
               <span class="price-article">$5.499</span>
               <button id="">Agregar</button>
@@ -43,21 +43,27 @@
             </article>
 
             <article>
-              <img src="./img/botines-futbol.jpg" class="img-article"id="imagen"  alt="pelota" />
+              <img src="./img/botines-futbol.jpg" class="img-article"  alt="pelota" />
               <span class="desc-article"
                 >Botines De Futbol adidas Predator 20.4
               </span>
-              <span class="price-article">$8.899</span>
+              <span class="price-article">$5.499</span>
+              <button id="">Agregar</button>
+
             </article>
             <article>
-              <img src="./img/pelota-basket.jpg" class="img-article"id="imagen"  alt="pelota" />
+              <img src="./img/pelota-basket.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Pelota de Basquet Molten Gr7 </span>
-              <span class="price-article"> $5.899</span>
+              <span class="price-article">$5.499</span>
+              <button id="">Agregar</button>
+
             </article>
             <article>
-              <img src="./img/raqueta-tenis.jpg" class="img-article"id="imagen"  alt="pelota" />
+              <img src="./img/raqueta-tenis.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Raqueta de Tenis Wilson Federer 23 </span>
-              <span class="price-article">$6.699</span>
+              <span class="price-article">$5.499</span>
+              <button id="">Agregar</button>
+
             </article>
             <div class="container">
               <div class="row">
@@ -82,6 +88,8 @@
     <!-- <button id="agregarTransparencia">Agregar transparencia</button> -->
   
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="jquery.js"></script>
+<script src="jquery.animate-shadow-min.js"></script>
     <script src="js/carrito.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -89,7 +97,7 @@
         $(document).ready(() => {
             $('#imagen').click(function() {
                 $('#imagen').css({opacity: 0.5});
-            });
+       });
             
         });
     </script>

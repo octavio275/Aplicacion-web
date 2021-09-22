@@ -52,7 +52,7 @@ function renderizarProductos() {
        
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = info.precio + '€';
+        miNodoPrecio.textContent = info.precio + '$';
        
         const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
@@ -93,7 +93,7 @@ function renderizarCarrito() {
     // Generamos los Nodos a partir de carrito
     carritoSinDuplicados.forEach((item) => {
         // Obtenemos el item que necesitamos de la variable base de datos
-        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+        const miItem = productos.filter((itemBaseDatos) => {
             // ¿Coincide las id? Solo puede existir un caso
             return itemBaseDatos.id === parseInt(item);
         });
@@ -144,7 +144,7 @@ function calcularTotal() {
     // Recorremos el array del carrito
     carrito.forEach((item) => {
         // De cada elemento obtenemos su precio
-        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+        const miItem = productos.filter((itemBaseDatos) => {
             return itemBaseDatos.id === parseInt(item);
         });
         total = total + miItem[0].precio;
