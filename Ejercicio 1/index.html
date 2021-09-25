@@ -20,7 +20,9 @@
 
     <div class="body">
       <nav>
-        <a href="index.html" class="category_item active" category="inicio">Inicio</a>
+        <a href="index.html" class="category_item active" category="inicio"
+          >Inicio</a
+        >
         <a href="pages/futbol.html" class="category_item" category="futbol"
           >Futbol</a
         >
@@ -31,76 +33,67 @@
       </nav>
 
       <main>
-        <section id="section-futbol">
+        <section>
           <h2 class="subtitle">Más vendidos</h2>
           <div class="section-articles">
-            <article>
+            <article class="article">
               <img src="./img/pera-boxeo.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Pera De Boxeo Vintage Everlast </span>
               <span class="price-article">$5.499</span>
-              <button id="">Agregar</button>
-
+              <button id="btn-1">Agregar</button>
             </article>
 
-            <article>
-              <img src="./img/botines-futbol.jpg" class="img-article"  alt="pelota" />
+            <article class="article">
+              <img src="./img/botines-futbol.jpg" class="img-article" alt="pelota" />
               <span class="desc-article"
                 >Botines De Futbol adidas Predator 20.4
               </span>
               <span class="price-article">$5.499</span>
-              <button id="">Agregar</button>
-
+              <button id="btn-2">Agregar</button>
             </article>
-            <article>
+            <article class="article">
               <img src="./img/pelota-basket.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Pelota de Basquet Molten Gr7 </span>
               <span class="price-article">$5.499</span>
               <button id="">Agregar</button>
-
             </article>
-            <article>
+            <article class="article">
               <img src="./img/raqueta-tenis.jpg" class="img-article" alt="pelota" />
               <span class="desc-article">Raqueta de Tenis Wilson Federer 23 </span>
               <span class="price-article">$5.499</span>
               <button id="">Agregar</button>
-
             </article>
-            <div class="container">
+
+            <!-- Carrito -->
+            <div class="carrito-container">
               <div class="row">
-                  <main id="items" class="col-sm-8 row"></main>
-                  <aside class="col-sm-4">
-                      <p>Carrito</p>
-                      <ul id="carrito" class="list-group"></ul>
-                      <hr>
-                      <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
-                      <button class="boton" onclick="Comprar();">comprar </button>
-                  </aside>
+                <main id="items" class="col-sm-8 row"></main>
+                <aside class="col-sm-4">
+                  <p>Carrito</p>
+                  <div id="productos-carrito" class="list-group"></div>
+                  <hr />
+                  <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
+                  <button class="boton" onclick="Comprar();">Compra </button>
+                </aside>
               </div>
-          </div>
+            </div>
+            <!-- Fin carrito -->
+
+            
           </div>
         </section>
-   
       </main>
-      
     </div>
 
-    <br><br>
+    <br /><br />
     <!-- <button id="agregarTransparencia">Agregar transparencia</button> -->
-  
+
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="jquery.js"></script>
-<script src="jquery.animate-shadow-min.js"></script>
+    <!-- <script src="jquery.js"></script> -->
+    <script src="jquery.animate-shadow-min.js"></script>
     <script src="js/carrito.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(() => {
-            $('#imagen').click(function() {
-                $('#imagen').css({opacity: 0.5});
-       });
-            
-        });
-    </script>
     <footer>
       <p>Tienda Deportes todos los derechos reservados &copy; 2021 </p>
     </footer>
