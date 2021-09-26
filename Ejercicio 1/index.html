@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tienda</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -36,32 +36,52 @@
         <section>
           <h2 class="subtitle">Más vendidos</h2>
           <div class="section-articles">
-            <article class="article">
-              <img src="./img/pera-boxeo.jpg" class="img-article" alt="pelota" />
+            <article class="article" id="article-1">
+              <img
+                id="img-1"
+                src="./img/pera-boxeo.jpg"
+                class="img-article"
+                alt="pelota"
+                onclick="addItemCarrito(this);"
+              />
               <span class="desc-article">Pera De Boxeo Vintage Everlast </span>
               <span class="price-article">$5.499</span>
-              <button id="btn-1">Agregar</button>
             </article>
 
-            <article class="article">
-              <img src="./img/botines-futbol.jpg" class="img-article" alt="pelota" />
+            <article class="article" id="article-2">
+              <img
+                id="img-2"
+                src="./img/botines-futbol.jpg"
+                class="img-article"
+                alt="pelota"
+                onclick="addItemCarrito(this);"
+              />
               <span class="desc-article"
                 >Botines De Futbol adidas Predator 20.4
               </span>
               <span class="price-article">$5.499</span>
-              <button id="btn-2">Agregar</button>
             </article>
-            <article class="article">
-              <img src="./img/pelota-basket.jpg" class="img-article" alt="pelota" />
+            <article class="article" id="article-3">
+              <img
+                id="img-3"
+                src="./img/pelota-basket.jpg"
+                class="img-article"
+                alt="pelota"
+                onclick="addItemCarrito(this);"
+              />
               <span class="desc-article">Pelota de Basquet Molten Gr7 </span>
               <span class="price-article">$5.499</span>
-              <button id="">Agregar</button>
             </article>
-            <article class="article">
-              <img src="./img/raqueta-tenis.jpg" class="img-article" alt="pelota" />
+            <article class="article" id="article-4">
+              <img
+                id="img-4"
+                src="./img/raqueta-tenis.jpg"
+                class="img-article"
+                alt="pelota"
+                onclick="addItemCarrito(this);"
+              />
               <span class="desc-article">Raqueta de Tenis Wilson Federer 23 </span>
               <span class="price-article">$5.499</span>
-              <button id="">Agregar</button>
             </article>
 
             <!-- Carrito -->
@@ -78,8 +98,6 @@
               </div>
             </div>
             <!-- Fin carrito -->
-
-            
           </div>
         </section>
       </main>
@@ -88,14 +106,10 @@
     <br /><br />
     <!-- <button id="agregarTransparencia">Agregar transparencia</button> -->
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- <script src="jquery.js"></script> -->
-    <script src="jquery.animate-shadow-min.js"></script>
-    <script src="js/carrito.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <footer>
       <p>Tienda Deportes todos los derechos reservados &copy; 2021 </p>
     </footer>
   </body>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/carrito.js"></script>
 </html>
