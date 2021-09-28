@@ -47,6 +47,8 @@
               />
               <span class="desc-article">Pera De Boxeo Vintage Everlast </span>
               <span class="price-article">$5499</span>
+              <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+
             </article>
 
             <article class="article" id="article-2">
@@ -62,6 +64,8 @@
                 >Botines De Futbol adidas Predator 20.4
               </span>
               <span class="price-article">$8899</span>
+              <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+
             </article>
             <article class="article" id="article-3">
               <img
@@ -74,6 +78,8 @@
               />
               <span class="desc-article">Pelota de Basquet Molten Gr7 </span>
               <span class="price-article">$5899</span>
+              <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+
             </article>
             <article class="article" id="article-4">
               <img
@@ -86,21 +92,36 @@
               />
               <span class="desc-article">Raqueta de Tenis Wilson Federer 23 </span>
               <span class="price-article">$6699</span>
+              <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+
             </article>
 
             <!-- Carrito -->
-            <div class="carrito-container">
-              <div class="row">
-                <main id="items" class="col-sm-8 row"></main>
-                <aside class="col-sm-4">
-                  <p>Carrito</p>
-                  <div id="productos-carrito" class="list-group"></div>
-                  <hr />
-                  <p class="text-right">Total: &dollar;<span id="total">0</span></p>
-                  <button class="boton">Compra </button>
-                </aside>
-              </div>
-            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                <section>
+                    <h2 class="subtitle">Carrito</h2>
+                      <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                          <table id="lista-carrito" class="table">
+                              <thead>
+                                  <tr>
+                                      <th>Imagen</th>
+                                      <th>Nombre</th>
+                                      <th>Precio</th>
+                                      <th></th>
+                                  </tr>
+                              </thead>
+                              <tbody></tbody>
+                          </table>
+
+                          <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                          <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+                      </div>
+                   </li>
+                </section>
+              </ul>
+          </div>
             <!-- Fin carrito -->
           </div>
         </section>
@@ -112,5 +133,7 @@
     </footer>
   </body>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- <script src="js/carrito2.js"></script>  -->
   <script src="js/carrito.js"></script>
+  <script src="js/pedido.js"></script>
 </html>

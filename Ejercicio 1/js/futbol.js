@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $.get({
-    url: 'https://localhost:44366/api/Libros',
+    url: 'jsonGenerator.js',
     success: (data) => {
       console.log(data);
 
