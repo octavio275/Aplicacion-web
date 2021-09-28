@@ -91,6 +91,7 @@ section > h2 {
 .section-articles {
   display: flex;
   flex-direction: row;
+  flex-wrap:wrap;
   justify-content: space-evenly;
 }
 .article {

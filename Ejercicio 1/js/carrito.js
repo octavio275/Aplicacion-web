@@ -64,11 +64,10 @@ const addItemCarrito = () => {
 const calcularTotal = (precio) => {
   let actual = parseInt($('#total').text());
 
-console.log(actual,precio)
-
+  console.log(actual, precio);
 
   actual = actual + parseInt(precio);
-  console.log(actual)
+  console.log(actual);
 
   $('#total').html(actual);
 };
